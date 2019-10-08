@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Gazi Notlar</string>
+    <string name="facebook_application_id">463550817556315</string>
+    <string name="fb_login_protocol_scheme">fb463550817556315</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>

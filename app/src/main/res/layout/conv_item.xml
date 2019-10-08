@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/maincontainer"
+        android:layout_marginBottom="10dp"
+        >
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/profileimagecontainer">
+<de.hdodenhof.circleimageview.CircleImageView
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:src="@drawable/ic_ellipse_1"
+    android:layout_marginRight="10dp"
+    android:id="@+id/profileimage"/>
+        <ProgressBar
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_ellipse_1"
+            android:layout_marginRight="5dp"
+            android:id="@+id/loading"/>
+        </FrameLayout>
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/redicon"
+            android:layout_alignEnd="@id/profileimagecontainer"
+            android:layout_alignBottom="@id/profileimagecontainer"
+            android:layout_marginRight="5dp"
+            android:id="@+id/status"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@id/profileimagecontainer"
+            android:orientation="vertical"
+            android:id="@+id/messagecontainer">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="User Display Name"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:id="@+id/username"
+
+        />
+
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                >
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:text="Last Message"
+                android:singleLine="true"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:id="@+id/message"
+                />
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/newmessages"
+                    android:text="1"
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@drawable/circletext"
+                    android:visibility="visible"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_delete_black_24dp"
+            android:id="@+id/deleteconv"
+            android:visibility="visible"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignBaseline="@id/maincontainer"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal"
+        android:background="#B71C1C"
+        android:id="@+id/deletelayout"
+        android:visibility="gone"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Delete Conversation"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1372824071",
+    "firebase_url": "https://gazi-notlar.firebaseio.com",
+    "project_id": "gazi-notlar",
+    "storage_bucket": "gazi-notlar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1372824071:android:174e4343851dc13a",
+        "android_client_info": {
+          "package_name": "a33y.jo.gazinotlar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1372824071-5lq7qucoq9h0qdj18320rmuur21lu3f2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "a33y.jo.gazinotlar",
+            "certificate_hash": "46bb6370dec380b2de6fc9ca0b4e14c14fae6b6a"
+          }
+        },
+        {
+          "client_id": "1372824071-dbo4hucrqk1uimen37360haiaai4d5c7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzMZc-S2lVSjAM7KNhlZ0YLXdG_r7IiMc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1372824071-dbo4hucrqk1uimen37360haiaai4d5c7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

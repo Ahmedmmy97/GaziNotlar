@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:title="Home"
+    android:icon="@drawable/ic_round_home_24px"
+    android:id="@+id/homebtn"
+    />
+    <item
+        android:title="My Notes"
+        android:icon="@drawable/ic_round_notes_24px"
+        android:id="@+id/ntsbtn"
+        />
+    <item
+        android:title="Chat"
+        android:icon="@drawable/ic_round_chat_24px"
+        android:id="@+id/chtbtn"
+        />
+    <item
+        android:title="More"
+        android:icon="@drawable/ic_round_more_horiz_24px"
+        android:id="@+id/morebtn"
+        />
+</menu>
