@@ -24,12 +24,19 @@
                 android:textSize="50sp"
                 android:gravity="center"
                 android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Coming Soon"
+                android:gravity="center"
+                android:textSize="20dp"/>
             <a33y.jo.gazinotlar.CustomGridView
                 android:id="@+id/recycler"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:numColumns="2"
                 android:listSelector="@android:color/transparent"
+                android:visibility="gone"
                 >
 
             </a33y.jo.gazinotlar.CustomGridView>
