@@ -10,6 +10,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
@@ -71,14 +72,20 @@ public class MoreFrag extends Fragment implements FileListeners{
             @Override
             public void onClick(View v) {
                 DataHelper.updateStatus("offline");
+                DataHelper.userListeners.clear();
                 FirebaseAuth.getInstance().signOut();
                 LoginManager.getInstance().logOut();
-                User.getUsers().clear();
-                User.setCurrentUser(null);
-                Intent intent = new Intent(getActivity(),Login.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
-                getActivity().finish();
+                Toast.makeText(getContext(),"Signed Out Successfully!",Toast.LENGTH_SHORT).show();
+                new Handler().postDelayed(new Runnable(){
+                    @Override
+                    public void run() {
+                        User.getUsers().clear();
+                        User.setCurrentUser(null);
+                        Intent intent = new Intent(getActivity(), Login.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(intent);
+                        getActivity().finish();
+                    }},1000);
             }
         });
         image = v.findViewById(R.id.image);

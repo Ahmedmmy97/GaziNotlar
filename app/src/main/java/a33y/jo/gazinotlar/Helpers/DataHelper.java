@@ -174,7 +174,7 @@ public class DataHelper{
             public void onCancelled(DatabaseError databaseError) {
                 Log.w(TAG, "postComments:onCancelled", databaseError.toException());
                 Toast.makeText(c, "Failed to load comments.",
-                        Toast.LENGTH_SHORT).show();
+                        Toast.LENGTH_SHORT);
             }
         };
         myref.addChildEventListener(childEventListener);
