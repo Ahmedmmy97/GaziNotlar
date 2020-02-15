@@ -5,7 +5,10 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
@@ -32,6 +35,7 @@ public class SplashActivity extends AppCompatActivity implements UserListener{
         super.onCreate(savedInstanceState);
         mAuth =FirebaseAuth.getInstance();
         setContentView(R.layout.splash_frag);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         c = SplashActivity.this;
         logo = findViewById(R.id.logo);
         loadingbar = findViewById(R.id.loading);
@@ -49,8 +53,14 @@ public class SplashActivity extends AppCompatActivity implements UserListener{
                     DataHelper.readUser(getApplicationContext(), currentUser.getUid());
                 }else {
                     Intent intent = new Intent(getApplicationContext(), Login.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    startActivity(intent);
+                    //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+                        ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(SplashActivity.this, logo, ViewCompat.getTransitionName(logo));
+                        startActivity(intent,options.toBundle());
+                    }else {
+
+                        startActivity(intent);
+                    }
                     finish();
                 }
 
@@ -91,8 +101,14 @@ public class SplashActivity extends AppCompatActivity implements UserListener{
             finish();
         }else {
             Intent intent = new Intent(getApplicationContext(), Login.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
+            //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+                ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(this, logo, ViewCompat.getTransitionName(logo));
+                startActivity(intent,options.toBundle());
+            }else {
+
+                startActivity(intent);
+            }
             finish();
         }
     }

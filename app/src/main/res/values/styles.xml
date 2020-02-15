@@ -8,9 +8,15 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="ratingBarStyle">@style/AppThemeRatingBar</item>
-
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
-
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
     <style name="FacebookLoginButton">
         <item name="android:textSize">@dimen/smallTxtSize</item>
 
@@ -18,8 +24,6 @@
         <item name="android:layout_marginBottom">10dp</item>
         <item name="android:layout_gravity">center_horizontal</item>
     </style>
-    <style name="Menustyle" parent="Theme.MaterialComponents.Light">
-      <item name="android:background">@android:color/white</item>
-    </style>
+
 
 </resources>

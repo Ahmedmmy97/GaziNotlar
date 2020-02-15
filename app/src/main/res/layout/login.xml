@@ -2,21 +2,40 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary1"
+    android:background="#87cefd"
     android:orientation="vertical"
     android:gravity="center"
     style="@style/AppTheme"
     android:id="@+id/maincontainer">
        <ImageView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:src="@drawable/ic_ellipse_3"
+           android:layout_width="300dp"
+           android:layout_height="300dp"
+           android:src="@drawable/logo"
+           android:transitionName="logo"
+           android:id="@+id/logo"
            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
        <LinearLayout
+           android:alpha="0"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:orientation="vertical"
-           android:layout_marginTop="30dp">
+           android:layout_marginTop="30dp"
+           android:gravity="center"
+           android:id="@+id/signupLayout"
+           >
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Sign Up"
+               android:textSize="30dp"
+               android:textColor="#fff"
+               android:textStyle="bold"
+               />
            <FrameLayout
                android:layout_width="wrap_content"
                android:layout_height="wrap_content">
